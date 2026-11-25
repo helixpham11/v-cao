@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: "Cormorant Garamond", Georgia, serif;
+    --font-poem: "Lora", Georgia, serif;
+    --font-ui: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    background-color: #0b0a09;
+    color: #f5efe4;
+    font-family: var(--font-ui);
+  }
+
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-poem {
+  font-family: var(--font-poem);
+}
+
+.font-ui {
+  font-family: var(--font-ui);
+}
+
+/* Museum spotlight volumetric cone & warm glow */
+.spotlight-beam {
+  background: radial-gradient(
+    ellipse 42% 78% at 50% 0%,
+    rgba(244, 214, 138, 0.22) 0%,
+    rgba(212, 175, 55, 0.1) 36%,
+    rgba(184, 146, 58, 0.03) 65%,
+    transparent 88%
+  );
+}
+
+.spotlight-cover-cone {
+  background: radial-gradient(
+    ellipse 58% 82% at 50% 0%,
+    rgba(248, 224, 158, 0.28) 0%,
+    rgba(212, 175, 55, 0.13) 42%,
+    rgba(184, 146, 58, 0.03) 72%,
+    transparent 95%
+  );
+}
+
+.spotlight-floor-pool {
+  background: radial-gradient(
+    ellipse 55% 34% at 50% 55%,
+    rgba(212, 175, 55, 0.14) 0%,
+    rgba(184, 146, 58, 0.04) 55%,
+    transparent 90%
+  );
+}
+
+/* Subtle aged archival ivory paper surface */
+.archival-ivory-paper {
+  background-color: #f5efe4;
+  background-image:
+    radial-gradient(at 15% 12%, rgba(255, 252, 245, 0.72) 0%, transparent 55%),
+    radial-gradient(at 88% 85%, rgba(218, 203, 176, 0.55) 0%, transparent 60%),
+    linear-gradient(180deg, #f5efe4 0%, #efe6d6 55%, #eae0cc 100%);
+}
+
+/* Fine velvet cabinet surface for exhibition covers */
+.velvet-plaque {
+  background: linear-gradient(165deg, #191613 0%, #12100d 55%, #0c0b09 100%);
+}
+
+/* Custom subtle scrollbars for reading folio */
+.folio-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.folio-scroll::-webkit-scrollbar-track {
+  background: rgba(184, 146, 58, 0.08);
+}
+
+.folio-scroll::-webkit-scrollbar-thumb {
+  background: rgba(184, 146, 58, 0.35);
+  border-radius: 3px;
+}
+
+.folio-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(184, 146, 58, 0.55);
+}
+
+@keyframes floatDustA {
+  0% {
+    transform: translate3d(0px, 0px, 0) scale(0.9);
+    opacity: 0.15;
+  }
+  30% {
+    transform: translate3d(14px, -22px, 0) scale(1.1);
+    opacity: 0.55;
+  }
+  65% {
+    transform: translate3d(-10px, -46px, 0) scale(0.95);
+    opacity: 0.42;
+  }
+  100% {
+    transform: translate3d(6px, -72px, 0) scale(0.85);
+    opacity: 0.12;
+  }
+}
+
+@keyframes floatDustB {
+  0% {
+    transform: translate3d(0px, 0px, 0) scale(0.95);
+    opacity: 0.18;
+  }
+  35% {
+    transform: translate3d(-16px, -26px, 0) scale(1.08);
+    opacity: 0.52;
+  }
+  70% {
+    transform: translate3d(12px, -50px, 0) scale(0.92);
+    opacity: 0.36;
+  }
+  100% {
+    transform: translate3d(-4px, -76px, 0) scale(0.85);
+    opacity: 0.14;
+  }
+}
+
+.dust-mote-a {
+  animation-name: floatDustA;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  will-change: transform, opacity;
+}
+
+.dust-mote-b {
+  animation-name: floatDustB;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dust-mote-a,
+  .dust-mote-b {
+    animation: none;
+  }
+}
