@@ -19,7 +19,7 @@ export function getPageTurnProfile(kind: PageTurnKind): PageTurnAudioProfile {
       sweepStartFreqHz: 920,
       sweepEndFreqHz: 2350,
       settleTimeSec: 0.29,
-      peakGain: 0.56,
+      peakGain: 0.32,
       panStart: -0.22,
       panEnd: 0.22,
     };
@@ -30,7 +30,7 @@ export function getPageTurnProfile(kind: PageTurnKind): PageTurnAudioProfile {
     sweepStartFreqHz: 2050,
     sweepEndFreqHz: 820,
     settleTimeSec: 0.23,
-    peakGain: 0.48,
+    peakGain: 0.28,
     panStart: 0.22,
     panEnd: -0.22,
   };

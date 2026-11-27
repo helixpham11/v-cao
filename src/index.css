@@ -8,8 +8,8 @@
   }
 
   html {
-    background-color: #0b0a09;
-    color: #f5efe4;
+    background-color: #2b2927;
+    color: #f7f2e8;
     font-family: var(--font-ui);
   }
 
@@ -43,12 +43,29 @@
   font-family: var(--font-ui);
 }
 
+/* Smooth multi-stop warm slate-gray to soft charcoal-black vertical gradient */
+.museum-gradient-canvas {
+  background-color: #262422;
+  background-image:
+    radial-gradient(ellipse 90% 42% at 50% 0%, rgba(212, 175, 55, 0.09), transparent 70%),
+    linear-gradient(
+      180deg,
+      #34312e 0%,
+      #2e2b29 14%,
+      #292624 30%,
+      #23211f 48%,
+      #1e1c1a 66%,
+      #181615 84%,
+      #131210 100%
+    );
+}
+
 /* Museum spotlight volumetric cone & warm glow */
 .spotlight-beam {
   background: radial-gradient(
     ellipse 42% 78% at 50% 0%,
-    rgba(244, 214, 138, 0.22) 0%,
-    rgba(212, 175, 55, 0.1) 36%,
+    rgba(244, 214, 138, 0.24) 0%,
+    rgba(212, 175, 55, 0.11) 36%,
     rgba(184, 146, 58, 0.03) 65%,
     transparent 88%
   );
@@ -57,8 +74,8 @@
 .spotlight-cover-cone {
   background: radial-gradient(
     ellipse 58% 82% at 50% 0%,
-    rgba(248, 224, 158, 0.28) 0%,
-    rgba(212, 175, 55, 0.13) 42%,
+    rgba(248, 224, 158, 0.3) 0%,
+    rgba(212, 175, 55, 0.14) 42%,
     rgba(184, 146, 58, 0.03) 72%,
     transparent 95%
   );
@@ -84,7 +101,7 @@
 
 /* Fine velvet cabinet surface for exhibition covers */
 .velvet-plaque {
-  background: linear-gradient(165deg, #191613 0%, #12100d 55%, #0c0b09 100%);
+  background: linear-gradient(165deg, #2b2723 0%, #221f1c 52%, #191714 100%);
 }
 
 /* Custom subtle scrollbars for reading folio */

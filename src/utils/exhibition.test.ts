@@ -64,13 +64,13 @@ test('exhibition catalog contains all 9 required Vu Cao works in exact order', (
   assert.deepEqual(
     VU_CAO_POEMS.map((p) => p.title),
     [
+      'Ngày xưa',
+      'Núi Đôi',
       'Buổi sớm',
       'Chuyện dân gian',
       'Đèo Trúc',
       'Ngang dốc núi',
-      'Ngày xưa',
       'Người gác cầu',
-      'Núi Đôi',
       'Thơ của Bác',
       'Tiếng chuông',
     ]
@@ -99,7 +99,7 @@ test('page-turn audio profiles provide realistic 3-stage parameters for open and
   assert.ok(openProfile.sweepEndFreqHz > openProfile.sweepStartFreqHz);
   assert.ok(closeProfile.sweepEndFreqHz < closeProfile.sweepStartFreqHz);
   assert.ok(openProfile.settleTimeSec > openProfile.liftDurationSec);
-  assert.ok(openProfile.peakGain >= 0.45 && openProfile.peakGain <= 0.8);
+  assert.ok(openProfile.peakGain >= 0.25 && openProfile.peakGain <= 0.45);
 });
 
 test('museum scroll easing is bounded [0, 1] and monotonically increasing', async () => {

@@ -87,16 +87,16 @@ export const ExhibitionStage: React.FC<ExhibitionStageProps> = ({
     >
       {/* Section Heading */}
       <ScrollReveal>
-        <div className="mb-10 flex flex-col justify-between gap-4 border-b border-[#B8923A]/25 pb-6 sm:flex-row sm:items-end">
+        <div className="mb-10 flex flex-col justify-between gap-4 border-b border-[#D4AF37]/20 pb-6 sm:flex-row sm:items-end">
           <div>
-            <p className="font-ui text-xs tracking-[0.18em] text-[#B8923A]">
+            <p className="font-ui text-xs tracking-[0.18em] text-[#E2C15A]">
               Bộ Sưu Tập Tuyển Chọn · I — IX
             </p>
-            <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-[#F5EFE4] sm:text-4xl">
+            <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight text-[#F7F2E8] sm:text-4xl">
               Tủ Kính Trưng Bày Tác Phẩm
             </h2>
           </div>
-          <p className="max-w-md font-poem text-sm italic text-[#C9BA9E]/85 sm:text-right">
+          <p className="max-w-md font-poem text-sm italic text-[#DDD2BE]/90 sm:text-right">
             Chạm vào một ấn bản để bật luồng đèn rọi, khép mờ khung cảnh xung quanh và mở trang đọc.
           </p>
         </div>
@@ -122,7 +122,7 @@ export const ExhibitionStage: React.FC<ExhibitionStageProps> = ({
               }}
               transition={{ duration: 0.48, ease: [0.22, 1, 0.36, 1] }}
               style={{ willChange: 'transform, opacity' }}
-              className={`relative rounded-none border border-[#B8923A]/15 bg-[#12100E] p-3.5 transition-colors duration-300 hover:border-[#D4AF37]/35 ${
+              className={`relative rounded-none border border-[#D4AF37]/20 bg-[#211E1B]/85 p-3.5 transition-colors duration-300 hover:border-[#D4AF37]/45 ${
                 activePoem !== null ? 'pointer-events-none' : ''
               }`}
             >
